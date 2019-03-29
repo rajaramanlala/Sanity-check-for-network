@@ -6,7 +6,7 @@ import os
 
 loginname = raw_input("Enter the username:")
 name = raw_input("Enter the SRX firewall name:")
-commandsfile = open("srxommands.txt" , "r")
+commandsfile = open("srxcommands.txt" , "r")
 bastion = {  'device_type' : 'juniper_junos', 'host': name , 'username' : loginname , 'password': getpass.getpass() , 'blocking_timeout': 8 }
 net_connect = ConnectHandler(**bastion)
 for cmd in commandsfile:
